@@ -97,8 +97,9 @@ public class AccountPersistence extends Persistence {
 
     public AccountBO findLoanByClientGovernmentIdAndProductShortName(String clientGovernmentId,
             String productShortName) throws PersistenceException {
-        Map<String, String> queryParameters = new HashMap<String, String>();
+        Map<String, Object> queryParameters = new HashMap<String, Object>();
         queryParameters.put("clientGovernmentId", clientGovernmentId);
+        queryParameters.put("loanAccountTypeId", AccountTypes.LOAN_ACCOUNT.getValue());
         queryParameters.put("productShortName", productShortName);
         Object queryResult = execUniqueResultNamedQuery(
                 NamedQueryConstants.FIND_LOAN_ACCOUNT_BY_CLIENT_GOVERNMENT_ID_AND_PRODUCT_SHORT_NAME, queryParameters);
