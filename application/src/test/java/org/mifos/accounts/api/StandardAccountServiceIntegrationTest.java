@@ -134,6 +134,14 @@ public class StandardAccountServiceIntegrationTest extends AccountIntegrationTes
         Assert.assertEquals(accountBO.getAccountId().intValue(), accountReferenceDto.getAccountId());
     }
 
+    public void testLookupLoanFromClientGovernmentIdAndLoanProductShortName() throws Exception {
+        Assert.fail("unimplemented");
+    }
+
+    public void testFailureOfLookupLoanFromClientGovernmentIdAndLoanProductShortName() throws Exception {
+        Assert.fail("unimplemented");
+    }
+
     public void testValidatePaymentWithInvalidPaymentType() throws Exception {
         String paymentAmount = "700";
         standardAccountService.setAccountPersistence(new AccountPersistence());
