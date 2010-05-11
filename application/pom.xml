@@ -12,9 +12,9 @@
         <version>1.5-SNAPSHOT</version>
     </parent>
     <scm>
-        <url>git://mifos.git.sourceforge.net/gitroot/mifos/head</url>
-        <connection>scm:git:git://mifos.git.sourceforge.net/gitroot/mifos/</connection>
-        <developerConnection>scm:git:ssh://mifos.git.sourceforge.net/gitroot/mifos/head</developerConnection>
+        <url>git://mifos.git.sourceforge.net/gitroot/mifos/1.5.x</url>
+        <connection>scm:git:git://mifos.git.sourceforge.net/gitroot/mifos/1.5.x</connection>
+        <developerConnection>scm:git:ssh://mifos.git.sourceforge.net/gitroot/mifos/1.5.x</developerConnection>
     </scm>
     <properties>
         <modules.root.dir>${basedir}/..</modules.root.dir>
