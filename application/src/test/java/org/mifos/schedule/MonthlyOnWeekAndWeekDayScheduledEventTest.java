@@ -72,8 +72,4 @@ public class MonthlyOnWeekAndWeekDayScheduledEventTest {
     private DateTime tuesdayOnFirstWeekOneMonthFrom(final DateTime from) {
         return from.plusMonths(1).withDayOfMonth(7).withDayOfWeek(DayOfWeek.tuesday());
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> master
