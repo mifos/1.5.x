@@ -49,6 +49,7 @@ import org.mifos.application.meeting.business.MeetingBO;
 import org.mifos.application.servicefacade.DependencyInjectedServiceLocator;
 import org.mifos.application.util.helpers.EntityType;
 import org.mifos.application.util.helpers.YesNoFlag;
+import org.mifos.config.ClientRules;
 import org.mifos.config.FiscalCalendarRules;
 import org.mifos.config.business.MifosConfiguration;
 import org.mifos.config.util.helpers.ConfigurationConstants;
@@ -544,30 +545,57 @@ public class ClientBO extends CustomerBO {
 
      /**
       * This method is used to update the Client Family and Name Details
-      *
-      * @param primaryKeys
-      * @param clientNameDetailView
-      * @param clientFamilyDetailView
       */
-     public void updateFamilyAndNameDetails (final List<Integer> primaryKeys,final List<ClientNameDetailView> clientNameDetailView, final List<ClientFamilyDetailView> clientFamilyDetailView) {
-         for(int key=0;key<primaryKeys.size();key++) {
-             // check for the primary key if that is not null update the data
-            if(primaryKeys.get(key)!=null){
-              //update name details
-                for (ClientNameDetailEntity clientNameDetailEntity : nameDetailSet){
-                    if(clientNameDetailEntity.getCustomerNameId().intValue()==primaryKeys.get(key).intValue()){
-                        clientNameDetailEntity.updateNameDetails(clientNameDetailView.get(key));
-                    }// if clientNameDetailEntity.getCustomerNameId()
-                }//inner for clientNameDetailEntity
+     public void updateFamilyAndNameDetails(
+             final List<Integer> primaryKeys,
+             final List<ClientNameDetailView> clientNameDetailDto,
+             final List<ClientFamilyDetailView> clientFamilyDetailDto) {
 
-                //update family details
-                for (ClientFamilyDetailEntity clientFamilyDetailEntity  : familyDetailSet){
-                    if(clientFamilyDetailEntity.getClientName().getCustomerNameId().intValue()==primaryKeys.get(key).intValue()){
-                        clientFamilyDetailEntity.updateClientFamilyDetails(clientFamilyDetailView.get(key));
-                    }// if clientFamilyDetailEntity
-                }//end of for clientFamilyDetailEntity
-            }// end of if
-        }//End of for
+         for (int key = 0; key < primaryKeys.size(); key++) {
+
+             if (primaryKeys.get(key) != null) {
+
+                 for (ClientNameDetailEntity clientNameDetailEntity : nameDetailSet) {
+                     if (clientNameDetailEntity.getCustomerNameId().intValue() == primaryKeys.get(key).intValue()) {
+
+                         clientNameDetailEntity.updateNameDetails(clientNameDetailDto.get(key));
+
+                         // if switched from familyDetailsRequired=false to true then migrate clientNameDetail to family
+                         // details table.
+                         if (ClientRules.isFamilyDetailsRequired()) {
+                             // check each detail to see if it is part of familyDetails and if not, add it to
+                             // familyDetails
+                             for (ClientFamilyDetailView clientFamilyDetail : clientFamilyDetailDto) {
+
+                                 if (familyDetailsDoesNotAlreadyContain(clientNameDetailEntity.getCustomerNameId())) {
+                                     ClientFamilyDetailEntity clientFamilyEntity = new ClientFamilyDetailEntity(this,
+                                             clientNameDetailEntity, clientFamilyDetail);
+                                     familyDetailSet.add(clientFamilyEntity);
+                                 }
+                             }
+                         }
+                     }
+
+                     for (ClientFamilyDetailEntity clientFamilyDetailEntity : familyDetailSet) {
+                         if (clientFamilyDetailEntity.getClientName().getCustomerNameId().intValue() == primaryKeys.get(key).intValue()) {
+                             clientFamilyDetailEntity.updateClientFamilyDetails(clientFamilyDetailDto.get(key));
+                         }
+                     }
+                 }
+             }
+         }
+     }
+
+     private boolean familyDetailsDoesNotAlreadyContain(Integer customerNameId) {
+
+         boolean resultNotFound = true;
+         for (ClientFamilyDetailEntity clientFamilyDetailEntity : familyDetailSet) {
+             if (clientFamilyDetailEntity.getClientName().getCustomerNameId().intValue() == customerNameId.intValue()) {
+                 return false;
+             }
+         }
+
+         return resultNotFound;
      }
 
      /**
