@@ -34,6 +34,8 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+import junit.framework.Assert;
+
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 import org.junit.Before;
@@ -166,6 +168,17 @@ public class StandardAccountServiceTest {
             StaticHibernateUtil.setHibernateUtil(new HibernateUtil());
         }
 
+    }
+
+
+    @Test
+    public void testMakeLoanDisbursements() throws Exception {
+        Assert.fail("unimplemented");
+    }
+
+    @Test
+    public void testValidateDisbursement() throws Exception {
+        Assert.fail("unimplemented");
     }
 
     @Test
