@@ -127,10 +127,8 @@ public class StandardAccountService implements AccountService {
 
     }
 
-
     @Override
-    public void makeLoanDisbusrements(List<AccountPaymentParametersDto> accountPaymentParametersDtoList)
-            throws Exception {
+    public void disburseLoan(List<AccountPaymentParametersDto> accountPaymentParametersDtoList) throws Exception {
         for (AccountPaymentParametersDto accountPaymentParametersDto : accountPaymentParametersDtoList) {
             LoanBO loan = getLoanPersistence().getAccount(accountPaymentParametersDto.getAccount().getAccountId());
 
