@@ -335,52 +335,62 @@ iterator = null;]]></method>
                 <structure>
                     <property name="position">2</property>
                     <property name="name">Client</property>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="position">3</property>
                     <property name="name">LoanAmount</property>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="position">4</property>
                     <property name="name">Balance</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="position">5</property>
                     <property name="name">Principal</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="position">6</property>
                     <property name="name">Interest</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="position">7</property>
                     <property name="name">DaysInArrears</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="position">8</property>
                     <property name="name">Current</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="position">9</property>
                     <property name="name">1-30</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="position">10</property>
                     <property name="name">31-60</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="position">11</property>
                     <property name="name">61-90</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="position">12</property>
                     <property name="name">91-180</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="position">13</property>
                     <property name="name">>180</property>
+                    <property name="dataType">string</property>
                 </structure>
             </list-property>
             <list-property name="columnHints">
@@ -434,62 +444,62 @@ iterator = null;]]></method>
                     <structure>
                         <property name="position">2</property>
                         <property name="name">Client</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">3</property>
                         <property name="name">LoanAmount</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">4</property>
                         <property name="name">Balance</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">5</property>
                         <property name="name">Principal</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">6</property>
                         <property name="name">Interest</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">7</property>
                         <property name="name">DaysInArrears</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">8</property>
                         <property name="name">Current</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">9</property>
                         <property name="name">1-30</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">10</property>
                         <property name="name">31-60</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">11</property>
                         <property name="name">61-90</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">12</property>
                         <property name="name">91-180</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">13</property>
                         <property name="name">>180</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                 </list-property>
             </structure>
@@ -634,7 +644,7 @@ Packages.java.util.logging.Logger.getLogger("").info("DFLAIAB-CLOSE");]]></metho
                                                 <structure>
                                                     <property name="name">data item</property>
                                                     <expression name="expression">params["reportName"]</expression>
-                                                    <property name="dataType">any</property>
+                                                    <property name="dataType">string</property>
                                                 </structure>
                                             </list-property>
                                             <property name="resultSetColumn">data item</property>
@@ -707,162 +717,162 @@ Packages.java.util.logging.Logger.getLogger("").info("DFLAIAB-CLOSE");]]></metho
                 <structure>
                     <property name="name">Client</property>
                     <expression name="expression">dataSetRow["Client"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">LoanAmount</property>
                     <expression name="expression">dataSetRow["LoanAmount"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">Balance</property>
                     <expression name="expression">dataSetRow["Balance"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">Principal</property>
                     <expression name="expression">dataSetRow["Principal"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">Interest</property>
                     <expression name="expression">dataSetRow["Interest"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">DaysInArrears</property>
                     <expression name="expression">dataSetRow["DaysInArrears"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">Current</property>
                     <expression name="expression">dataSetRow["Current"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">1-30</property>
                     <expression name="expression">dataSetRow["1-30"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">31-60</property>
                     <expression name="expression">dataSetRow["31-60"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">61-90</property>
                     <expression name="expression">dataSetRow["61-90"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">91-180</property>
                     <expression name="expression">dataSetRow["91-180"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">>180</property>
                     <expression name="expression">dataSetRow[">180"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">Percent</property>
                     <expression name="expression">dataSetRow["Principal"]/dataSetRow["Balance"]*100</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">PrincipalSum</property>
                     <expression name="expression">Total.sum(dataSetRow["Principal"])</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">BalanceSum</property>
                     <expression name="expression">Total.sum(dataSetRow["Balance"])</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">InterestSum</property>
                     <expression name="expression">Total.sum(dataSetRow["Interest"])</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">Total</property>
                     <expression name="expression">dataSetRow["Current"]+Total.sum(dataSetRow["Balance"])</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">PercentageAtRisk</property>
                     <expression name="expression">Total.sum(dataSetRow["Balance"])/(dataSetRow["Current"]+Total.sum(dataSetRow["Balance"]))*100</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">Sum31-60</property>
                     <expression name="expression">Total.sum(dataSetRow["31-60"])</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">Sum1-30</property>
                     <expression name="expression">Total.sum(dataSetRow["1-30"])</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">Sum61-90</property>
                     <expression name="expression">Total.sum(dataSetRow["61-90"])</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">Sum91-180</property>
                     <expression name="expression">Total.sum(dataSetRow["91-180"])</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">Sum>180</property>
                     <expression name="expression">Total.sum(dataSetRow[">180"])</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">1-30Percentage</property>
                     <expression name="expression">Total.sum(dataSetRow["1-30"])/(Total.sum(dataSetRow["Balance"])+dataSetRow["Current"])*100</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">31-60Percentage</property>
                     <expression name="expression">Total.sum(dataSetRow["31-60"])/(Total.sum(dataSetRow["Balance"])+dataSetRow["Current"])*100</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">61-90Percentage</property>
                     <expression name="expression">Total.sum(dataSetRow["61-90"])/(Total.sum(dataSetRow["Balance"])+dataSetRow["Current"])*100</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">91-180Percentage</property>
                     <expression name="expression">Total.sum(dataSetRow["91-180"])/(Total.sum(dataSetRow["Balance"])+dataSetRow["Current"])*100</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">>180Percentage</property>
                     <expression name="expression">Total.sum(dataSetRow[">180"])/(Total.sum(dataSetRow["Balance"])+dataSetRow["Current"])*100</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">MoreThan30</property>
                     <expression name="expression">(Total.sum(dataSetRow["31-60"])+Total.sum(dataSetRow["61-90"])+Total.sum(dataSetRow["91-180"])+Total.sum(dataSetRow[">180"]))/(Total.sum(dataSetRow["Balance"])+dataSetRow["Current"])*100</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">MoreThan60</property>
                     <expression name="expression">(Total.sum(dataSetRow["61-90"])+Total.sum(dataSetRow["91-180"])+Total.sum(dataSetRow[">180"]))/(Total.sum(dataSetRow["Balance"])+dataSetRow["Current"])*100</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">MoreThan90</property>
                     <expression name="expression">(Total.sum(dataSetRow["91-180"])+Total.sum(dataSetRow[">180"]))/(Total.sum(dataSetRow["Balance"])+dataSetRow["Current"])*100</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">ReportName</property>
                     <expression name="expression">dataSetRow["ReportName"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
             </list-property>
             <property name="pageBreakInterval">50</property>
