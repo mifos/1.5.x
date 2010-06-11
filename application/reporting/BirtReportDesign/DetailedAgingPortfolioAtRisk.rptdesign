@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.20" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 2.5.0.v20090603 Build &lt;2.5.0.v20090617-0630></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 2.5.1.v20090903 Build &lt;2.5.1.v20090917-1447></property>
     <property name="units">in</property>
     <property name="comments">Copyright (c) 2006 &lt;&lt;Your Company Name here>></property>
     <property name="layoutPreference">auto layout</property>
@@ -640,7 +640,7 @@ Packages.java.util.logging.Logger.getLogger("").info("DFLAIAB-CLOSE");]]></metho
                                             <list-property name="boundDataColumns">
                                                 <structure>
                                                     <property name="name">data item</property>
-                                                    <expression name="expression">params["reportName"]</expression>
+                                                    <expression name="expression">"Detailed Aging Portfolio At Risk"</expression>
                                                     <property name="dataType">string</property>
                                                 </structure>
                                             </list-property>
@@ -773,8 +773,8 @@ Packages.java.util.logging.Logger.getLogger("").info("DFLAIAB-CLOSE");]]></metho
                 </structure>
                 <structure>
                     <property name="name">Percent</property>
-                    <expression name="expression">dataSetRow["Principal"]/dataSetRow["Balance"]*100</expression>
-                    <property name="dataType">string</property>
+                    <expression name="expression" type="javascript">BirtMath.multiply(100,BirtMath.divide(dataSetRow["Principal"],dataSetRow["Balance"]))</expression>
+                    <property name="dataType">integer</property>
                 </structure>
                 <structure>
                     <property name="name">PrincipalSum</property>
@@ -868,7 +868,7 @@ Packages.java.util.logging.Logger.getLogger("").info("DFLAIAB-CLOSE");]]></metho
                 </structure>
                 <structure>
                     <property name="name">ReportName</property>
-                    <expression name="expression">dataSetRow["ReportName"]</expression>
+                    <expression name="expression">"Detailed Aging Portfolio At Risk"</expression>
                     <property name="dataType">string</property>
                 </structure>
             </list-property>
