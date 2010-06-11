@@ -163,7 +163,9 @@ if (loanProducts.size()>1) {
        row["ID"] = -1;
 
     return true;
-}]]></method>
+}
+
+return false;]]></method>
             <method name="close"><![CDATA[loanProducts = null;
 iterator = null;]]></method>
         </script-data-set>
@@ -317,7 +319,9 @@ if (loanOfficers.size()>1) {
        row["ID"] = -1;
    
     return true;
-}]]></method>
+}
+
+return false;]]></method>
             <method name="close"><![CDATA[loanOfficers = null;
 iterator = null;]]></method>
         </script-data-set>
