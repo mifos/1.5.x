@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.17" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 2.3.2.r232_v20090521 Build &lt;2.3.2.v20090601-0700></property>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.20" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 2.5.0.v20090603 Build &lt;2.5.0.v20090617-0630></property>
     <property name="units">in</property>
     <property name="comments">Copyright (c) 2006 &lt;&lt;Your Company Name here>></property>
+    <property name="layoutPreference">auto layout</property>
     <parameters>
         <scalar-parameter name="mifosHiddenParam" id="1626">
             <property name="hidden">true</property>
             <property name="valueType">static</property>
-            <property name="dataType">string</property>
             <property name="isRequired">false</property>
+            <property name="dataType">string</property>
             <property name="controlType">text-box</property>
             <structure name="format">
                 <property name="category">Unformatted</property>
@@ -17,8 +18,8 @@
         <scalar-parameter name="userId" id="29">
             <property name="hidden">true</property>
             <property name="valueType">static</property>
-            <property name="dataType">integer</property>
             <property name="isRequired">true</property>
+            <property name="dataType">integer</property>
             <property name="controlType">text-box</property>
             <structure name="format">
                 <property name="category">Unformatted</property>
@@ -28,42 +29,42 @@
             <property name="dataSetMode">multiple</property>
             <parameters>
                 <scalar-parameter name="branchId" id="39">
-                    <property name="valueType">dynamic</property>
-                    <property name="dataType">integer</property>
                     <text-property name="promptText">Branch Office</text-property>
+                    <property name="valueType">dynamic</property>
                     <property name="isRequired">true</property>
-                    <property name="controlType">list-box</property>
                     <property name="dataSetName">Branches</property>
                     <expression name="valueExpr">row["ID"]</expression>
                     <expression name="labelExpr">row["Name"]</expression>
+                    <property name="dataType">integer</property>
+                    <property name="controlType">list-box</property>
                     <property name="mustMatch">false</property>
                     <structure name="format">
                         <property name="category">Unformatted</property>
                     </structure>
                 </scalar-parameter>
                 <scalar-parameter name="loanOfficerId" id="40">
-                    <property name="valueType">dynamic</property>
-                    <property name="dataType">integer</property>
                     <text-property name="promptText">Loan Officer</text-property>
+                    <property name="valueType">dynamic</property>
                     <property name="isRequired">true</property>
-                    <property name="controlType">list-box</property>
                     <property name="dataSetName">LoanOfficers</property>
                     <expression name="valueExpr">row["ID"]</expression>
                     <expression name="labelExpr">row["Name"]</expression>
+                    <property name="dataType">integer</property>
+                    <property name="controlType">list-box</property>
                     <property name="mustMatch">false</property>
                     <structure name="format">
                         <property name="category">Unformatted</property>
                     </structure>
                 </scalar-parameter>
                 <scalar-parameter name="loanProductId" id="1341">
-                    <property name="valueType">dynamic</property>
-                    <property name="dataType">integer</property>
                     <text-property name="promptText">Loan Product</text-property>
+                    <property name="valueType">dynamic</property>
                     <property name="isRequired">true</property>
-                    <property name="controlType">list-box</property>
                     <property name="dataSetName">LoanProducts</property>
                     <expression name="valueExpr">row["ID"]</expression>
                     <expression name="labelExpr">row["Name"]</expression>
+                    <property name="dataType">integer</property>
+                    <property name="controlType">list-box</property>
                     <property name="mustMatch">false</property>
                     <structure name="format">
                         <property name="category">Unformatted</property>
@@ -555,6 +556,7 @@ Packages.java.util.logging.Logger.getLogger("").info("DFLAIAB-CLOSE");]]></metho
     <page-setup>
         <simple-master-page name="Report1 MasterPage" id="2">
             <property name="orientation">auto</property>
+            <property name="topMargin">1in</property>
             <property name="leftMargin">0.5in</property>
             <property name="bottomMargin">1in</property>
             <property name="rightMargin">0.5in</property>
