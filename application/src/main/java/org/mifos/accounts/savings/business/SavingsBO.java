@@ -620,12 +620,16 @@ public class SavingsBO extends AccountBO {
         Money interestAmount = new Money(getCurrency());
 
         if (trxn != null) {
-            SavingsTrxnDetailEntity savedTrxn = trxn;
-            trxn = trxn.getAccountPayment().getAmount().isGreaterThanZero() ? getLastTrxnForPayment(trxn
-                    .getAccountPayment()) : getLastTrxnForAdjustedPayment(trxn.getAccountPayment());
-            if (!savedTrxn.getAccountTrxnId().equals(trxn.getAccountTrxnId())) {
-                initialBalance = false;
+
+            if (!(trxn.getAccountAction().equals(AccountActionTypes.SAVINGS_INTEREST_POSTING))) {
+                SavingsTrxnDetailEntity savedTrxn = trxn;
+                trxn = trxn.getAccountPayment().getAmount().isGreaterThanZero() ? getLastTrxnForPayment(trxn
+                        .getAccountPayment()) : getLastTrxnForAdjustedPayment(trxn.getAccountPayment());
+                if (!savedTrxn.getAccountTrxnId().equals(trxn.getAccountTrxnId())) {
+                    initialBalance = false;
+                }
             }
+
             if (getInterestCalcType().getId().equals(InterestCalcType.MINIMUM_BALANCE.getValue())) {
                 principal = getMinimumBalance(fromDate, toDate, trxn, adjustedTrxn, initialBalance);
             } else if (getInterestCalcType().getId().equals(InterestCalcType.AVERAGE_BALANCE.getValue())) {
